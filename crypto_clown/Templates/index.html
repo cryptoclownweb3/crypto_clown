@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Clown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Patrick+Hand&family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            color: #000;
+            text-align: center;
+            overflow-x: hidden;
+            transition: background-color 0.5s;
+        }
+
+        /* Sekcija 1: Prva stran */
+        #home {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("static/images/scary-circus.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: 1;
+        }
+
+        .logo {
+            max-width: 120px;
+            transition: transform 0.05s ease-in-out;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Gumbi za navigacijo */
+        .nav-buttons {
+            margin-top: 80px; /* Razmak med logotipom in gumbi, povečano za več prostora */
+            z-index: 2; /* Zaslon nad zamegljeno sliko */
+        }
+
+        .nav-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #fff; /* Barva besedila */
+            background-color: transparent; /* Prosojno ozadje */
+            cursor: pointer;
+            text-decoration: none; /* Odstranitev podčrtanja */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Prehod za barvo ozadja in barvo besedila */
+        }
+
+        .about-button {
+            background-color: #6a5acd; /* Vijolično ozadje */
+            box-shadow: 0 5px 15px rgba(106, 90, 205, 0.5); /* 3D učinek */
+        }
+
+        .contact-button {
+            background-color: #1e90ff; /* Modro ozadje */
+            box-shadow: 0 5px 15px rgba(30, 144, 255, 0.5); /* 3D učinek */
+        }
+
+        .nav-button:hover {
+            color: #000; /* Barva besedila ob hoverju */
+            background-color: #fff; /* Bela barva ozadja ob hoverju */
+        }
+
+        .nav-button:active {
+            transform: scale(0.95); /* Animacija ob kliku */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Zmanjšanje sence ob kliku */
+        }
+
+        /* Sekcija 2: About Us */
+        #about {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            background-image: url("static/images/about-us-background.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #000;
+        }
+
+        .about-us-text {
+            font-size: 40px;
+            text-align: center;
+            color: #000;
+            font-family: 'Rubik Wet Paint', cursive;
+            max-width: 800px;
+        }
+
+        /* Sekcija 3: Contact */
+        #contact {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            background-image: url("static/images/scary-clown.gif");
+            background-size: cover;
+            background-position: center;
+            color: #000;
+        }
+
+        #contact h1, #contact p {
+            font-size: 40px;
+            color: #ff0000;
+            font-family: 'Rubik Wet Paint', cursive;
+        }
+
+        .contact a {
+            color: #ff0000;
+            font-family: 'Rubik Wet Paint', cursive;
+            font-size: 40px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .nav-button {
+                font-size: 16px; /* Manjša velikost besedila na mobilnih napravah */
+            }
+            .logo {
+                max-width: 100px; /* Manjša širina logotipa na mobilnih napravah */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Prva stran z ozadjem in klovnom -->
+    <div id="home">
+        <div class="social-icons">
+            <a href="https://twitter.com/cryptoclownweb3" target="_blank" aria-label="Twitter">
+                <img src="static/images/x-icon.png" alt="Twitter Icon">
+            </a>
+            <a href="https://t.me/xx_red69hawk_xx" target="_blank" aria-label="Telegram">
+                <img src="static/images/telegram-icon.png" alt="Telegram Icon">
+            </a>
+        </div>
+        <img src="static/images/crypto-clown-serious.png" alt="Crypto Clown Logo" class="logo" id="logo">
+        <h1>Welcome to the Crypto Clown</h1>
+
+        <!-- Gumbi za navigacijo -->
+        <div class="nav-buttons">
+            <a href="#about" class="nav-button about-button">About Us</a>
+            <a href="#contact" class="nav-button contact-button">Contact</a>
+        </div>
+    </div>
+
+    <!-- Sekcija "About Us" -->
+    <div id="about">
+        <div class="about-us-text">
+            <p>We are a group of crypto enthusiasts on a mission to find the next big thing. After years of searching and designing, we’ve perfected what cool design and websites look like.</p>
+            <p>If you're launching a new coin, we can create a website for you or help with design.</p>
+        </div>
+    </div>
+
+    <!-- Sekcija "Contact" -->
+    <div id="contact">
+        <h1>Contact</h1>
+        <p>For more information, you can contact us at:</p>
+        <p>Email: web.cryptoclown@gmail.com</p>
+        <p>Follow us on X:
+            <a href="https://x.com/cryptoclownweb3" target="_blank" aria-label="X">
+                <i class="fab fa-x" style="font-size: 24px; color: #ff0000; margin-left: 10px;"></i>
+            </a>
+        </p>
+        <p>Telegram:
+            <a href="https://t.me/xx_red69hawk_xx" target="_blank" aria-label="Telegram">
+                <img src="static/images/telegram-icon.png" alt="Telegram Icon" style="width: 30px; margin-left: 10px;">
+            </a>
+        </p>
+    </div>
+
+    <audio id="laughter-audio" src="static/sounds/laughter.mp3" preload="auto"></audio>
+
+    <script>
+        const logo = document.getElementById('logo');
+        const laughterAudio = document.getElementById('laughter-audio');
+        let scale = 1;
+        let increasing = true;
+
+        const expressions = [
+            "static/images/crypto-clown-serious.png",
+            "static/images/crypto-clown-smiling.png"
+        ];
+
+        setInterval(() => {
+            scale = increasing ? scale + 0.1 : scale - 0.1;
+            if (scale >= 4) {
+                increasing = false;
+            } else if (scale <= 1) {
+                increasing = true;
+            }
+            logo.style.transform = `scale(${scale})`;
+            if (scale < 3) {
+                logo.src = expressions[0];
+            } else {
+                logo.src = expressions[1];
+                playLaughter();
+            }
+        }, 50);
+
+        function playLaughter() {
+            if (laughterAudio.paused) {
+                laughterAudio.currentTime = 0;
+                laughterAudio.play();
+            }
+        }
+    </script>
+</body>
+</html>
